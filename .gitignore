@@ -1,0 +1,16 @@
+### Mac ###
+.DS_Store
+._.DS_Store
+
+### JetBrains ###
+.idea
+
+### vim ###
+._*
+*.swp
+
+### Composer ###
+composer.lock
+
+### 证书 ###
+basic/nginx/certificates
