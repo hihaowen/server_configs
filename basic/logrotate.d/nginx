@@ -1,0 +1,16 @@
+# nginx
+/home/work/logs/nginx/*.log {
+	su work work
+	create 644 work work
+	daily
+	rotate 7
+	dateext
+	dateformat .%Y%m%d
+	missingok
+	notifempty
+	delaycompress
+	sharedscripts
+	postrotate
+		[ -f /var/run/nginx.pid ] && kill -USR1 `cat /var/run/nginx.pid`
+	endscript
+}

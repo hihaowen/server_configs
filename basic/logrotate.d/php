@@ -1,0 +1,12 @@
+# PHP
+/home/work/logs/php/*.log {
+	su work work
+	create 644 work work
+	daily
+	rotate 7
+	dateext
+	dateformat .%Y%m%d
+	missingok
+	notifempty
+	delaycompress
+}
