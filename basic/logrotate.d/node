@@ -1,0 +1,16 @@
+# PM2 & nodejs
+/home/work/logs/node/*.log {
+    su work work
+    create 644 work work
+    daily
+    rotate 7
+    dateext
+    dateformat .%Y%m%d
+    missingok
+    notifempty
+    delaycompress
+    sharedscripts
+    postrotate
+        /usr/bin/sudo -u work /usr/bin/pm2 reload all
+    endscript
+}
