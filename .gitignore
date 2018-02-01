@@ -13,4 +13,4 @@
 composer.lock
 
 ### 证书 ###
-basic/nginx/certificates
+# basic/nginx/certificates
